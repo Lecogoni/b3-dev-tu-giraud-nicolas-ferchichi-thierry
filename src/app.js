@@ -30,8 +30,46 @@ class Calcultrice {
       }
     }
 
+    this.calculate();
+
     return this.result;
   }
+
+
+  calculate() {
+
+    if(this.inputArray[1] === '+'){
+        this.result = this.add(this.inputArray[0], this.inputArray[2])
+    }
+    if(this.inputArray[1] === '-'){
+        this.result = this.sub(this.inputArray[0], this.inputArray[2])
+    }
+    if(this.inputArray[1] === '*'){
+        this.result = this.multiply(this.inputArray[0], this.inputArray[2])
+    }
+    if(this.inputArray[1] === '/'){
+        this.result = this.divide(this.inputArray[0], this.inputArray[2])
+    }
+
+    return this.result;
+  }
+
+  add(a,b) {
+    return a + b;
+  }
+
+  sub(a,b) {
+    return a - b;
+  }
+
+  multiply(a,b) {
+    return a * b;
+  }
+
+  divide(a,b) {
+    return a / b;
+  }
+
 
 }
 
