@@ -11,10 +11,10 @@ mathématique. Lorsque que l'utilisateur appuie sur la touche Enter 🆗 le rés
 ## 🖥 Set le projet
 
 - Cloner le repository dans un dossier local de votre machine
+- https://github.com/Lecogoni/b3-dev-tu-giraud-nicolas-ferchichi-thierry.git
 ````
 npm install
 ````
-https://github.com/Lecogoni/b3-dev-tu-giraud-nicolas-ferchichi-thierry.git
 
 - Se déplancer dans le dossier cloner
 
@@ -43,4 +43,6 @@ npm test
 
 ## 📚 Présentation des versions
 
-#### V1 : git branch master
+#### V1 : git branch main
+
+- contient le readme et le package.json
