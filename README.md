@@ -12,9 +12,6 @@ mathématique. Lorsque que l'utilisateur appuie sur la touche Enter 🆗 le rés
 
 - Cloner le repository dans un dossier local de votre machine
 - https://github.com/Lecogoni/b3-dev-tu-giraud-nicolas-ferchichi-thierry.git
-````
-npm install
-````
 
 - Se déplancer dans le dossier cloner
 
