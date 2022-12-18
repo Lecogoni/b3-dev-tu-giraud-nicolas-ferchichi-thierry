@@ -28,9 +28,9 @@ describe('A. User input', function() {
     });
 
     it('4. When the operation is invalid then we receive a message : NaN', function(done) {
-        let error = NaN;
+        let error = 'NaN';
         app.sortUserInput('a+5');
-        assert.deepEqual(app.sortUserInput('a+5'), error);
+        assert.deepEqual(app.result, error);
         done();
     });
     
@@ -46,17 +46,17 @@ describe('B. Calculate', function() {
         });
     
         it ('1. Test the add function between 2 positive numbers', function(done) {
-            expect(app.add(1,2)).to.equal(3);
+            assert.equal(app.add(1,2),3);
             done();
         });
     
         it ('2. Test the add function between 1 positive number and 1 negative number ', function(done) {
-            expect(app.add(3,-2)).to.equal(1);
+            assert.equal(app.add(3,-2),1);
             done();
         });
     
         it ('3. Test the add function between 1 positive number and 1 negative number', function(done) {
-            expect(app.add(1,-2)).to.equal(-1);
+            assert.equal(app.add(1,-2),-1);
             done();
         });
     });
@@ -68,18 +68,12 @@ describe('B. Calculate', function() {
         });
     
         it ('1. Test the sub function between 2 positive numbers', function(done) {
-            expect(app.sub(47,32)).to.equal(15);
+            assert.equal(app.sub(47,32),15);
             done();
         });
     
-        it ('2. Test the sub function between 1 positive number and 1 negative number ', function(done) {
-            expect(app.sub(3,-2)).to.equal(5);
-            done();
-        });
-
-            
-        it ('3. Test the sub function between 1 positive integer and 1 positif float', function(done) {
-            expect(app.sub(7, 6.2)).to.equal(0.8);
+        it ('2. Test the sub function between 1 positive integer and 1 positif float', function(done) {
+            assert.equal(app.sub(7,6.2),0.8);
             done();
         });
     
@@ -119,7 +113,7 @@ describe('B. Calculate', function() {
         });
     
         it ('1. Test the divide function between 2 positive numbers', function(done) {
-            expect(app.divide(6,2)).to.equal(3);
+            expect(app.divide(6,2)).to.equal(3.0);
             done();
         });
     
@@ -129,11 +123,27 @@ describe('B. Calculate', function() {
         });
     
         it ('3. Test the divide function between 1 positive number and 1 positif float number', function(done) {
-            expect(app.divide(1,0.5)).to.equal(2);
+            expect(app.divide(1,0.5)).to.equal(2.0);
             done();
         });
     });
 
-
+    describe('F. Pourcentage',function() {
+        beforeEach(function() {
+            // Initialise l'application avant chaque test
+            app = new Calc();
+        });
+    
+        it ('1. Test the pourcentage function between 2 positive numbers', function(done) {
+            expect(app.pourcentage(20,100)).to.equal(20);
+            done();
+        });
+    
+        it ('2. Test the pourcentage function between 2 positive numbers', function(done) {
+            expect(app.pourcentage(85,1200)).to.equal(1020);
+            done();
+        });
+    
+    });
     
 });

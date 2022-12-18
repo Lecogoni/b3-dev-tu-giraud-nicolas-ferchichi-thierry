@@ -31,6 +31,7 @@ class Calcultrice {
     }
 
     this.calculate();
+    this.fixFloat();
 
     return this.result;
   }
@@ -50,8 +51,25 @@ class Calcultrice {
     if(this.inputArray[1] === '/'){
         this.result = this.divide(this.inputArray[0], this.inputArray[2])
     }
+    if(this.inputArray[1] === '%'){
+      this.result = this.pourcentage(this.inputArray[0], this.inputArray[2])
+  }
 
     return this.result;
+  }
+
+  isInteger(f){
+    return typeof(f)==="number" && Math.round(f) == f;
+  } 
+
+  isFloat(f){ 
+    return typeof(f)==="number" && !this.isInteger(this.result); 
+  }
+
+  fixFloat(){
+    if(this.isFloat(this.result)){
+      this.result = this.result.toFixed(1);
+    }
   }
 
   add(a,b) {
@@ -70,8 +88,12 @@ class Calcultrice {
     return a / b;
   }
 
-
+  pourcentage(a,b){
+    return (a * b) / 100
+  }
 }
+
+
 
 function getUserInput() {
   return new Promise(resolve => {
