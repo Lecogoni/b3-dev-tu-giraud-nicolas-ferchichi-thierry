@@ -3,7 +3,7 @@ const prompt = require('prompt');
 class Calcultrice {
 
   inputArray = [];
-  operations = ["x", "/", "+", "-", "%"];
+  operations = ["x", "/", "+", "-", "%", "V", "&"];
   number = "";
   result = 0;
 
@@ -53,7 +53,13 @@ class Calcultrice {
     }
     if(this.inputArray[1] === '%'){
       this.result = this.pourcentage(this.inputArray[0], this.inputArray[2])
-  }
+    }
+    if(this.inputArray[1] === 'V'){
+      this.result = this.squareRoot(this.inputArray[0])
+    }
+    if(this.inputArray[1] === '&'){
+      this.result = this.square(this.inputArray[0])
+    }
 
     return this.result;
   }
@@ -90,6 +96,14 @@ class Calcultrice {
 
   pourcentage(a,b){
     return (a * b) / 100
+  }
+  
+  squareRoot(a) {
+    return Math.sqrt(a);
+  }
+
+  square(a) {
+    return a*a;
   }
 }
 

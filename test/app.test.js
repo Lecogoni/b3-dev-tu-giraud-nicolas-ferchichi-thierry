@@ -145,5 +145,41 @@ describe('B. Calculate', function() {
         });
     
     });
+
+    describe('G. Square Root',function() {
+        beforeEach(function() {
+            // Initialise l'application avant chaque test
+            app = new Calc();
+        });
+    
+        it ('1. Test the squareRoot function for a positive number', function(done) {
+            expect(app.squareRoot(16)).to.equal(4);
+            done();
+        });
+    
+        it ('2. Test the pourcentageRoot function for a positive number', function(done) {
+            expect(app.squareRoot(5)).to.equal(2.2);
+            done();
+        });
+    
+    });
+
+    describe('H. Square',function() {
+        beforeEach(function() {
+            // Initialise l'application avant chaque test
+            app = new Calc();
+        });
+    
+        it ('1. Test the square function for a positive number', function(done) {
+            expect(app.square(5)).to.equal(25);
+            done();
+        });
+    
+        it ('2. Test the square function for a negative number', function(done) {
+            expect(app.square(-2)).to.equal(4);
+            done();
+        });
+    
+    });
     
 });

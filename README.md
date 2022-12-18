@@ -41,8 +41,12 @@ npm test
 ````
 
 
-## 📚 Présentation des versions
+## 🧮 Utilisation de la Calculatrice
 
-#### V1 : git branch main
-
-- contient le readme et le package.json
+````
+- saisir une opération mathématque valide dans le prompt
+- les critères de validé sont précisé dans le doc BDD.md
+- afin de calculer le carré d'un nombre saisir le nombre et le symbole & puis valider (ex carré de 5 : 5&)
+- afin de calculer le racine carré d'un nombre saisir le nombre et le symbole V puis valider (ex racine carré de 16 -> 16V )
+- afin de calculer le pourcentage d'un nombre saisir le nombre , le symbole % suivi du valeur pour le pourcentage puis valider (ex: 15 pourcent de 200 -> 15%200)
+````

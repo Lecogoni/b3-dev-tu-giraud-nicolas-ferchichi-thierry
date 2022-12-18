@@ -150,5 +150,3 @@
 > Alors le résultat de cette expression s'affiche dans la console <br>
 
 <br>
-
-## Autres opérateurs mathématiques
